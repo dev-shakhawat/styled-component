@@ -42,7 +42,7 @@ const BnrImg = styled.div`
 `
 const HeaddingOne = styled.h1`
 color: #4D4D4D;
-font-size: 64px;
+font-size: 70px;
 font-weight: 600;
 line-height: 76px;
 font-family: "Inter", sans-serif;
