@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Container from './common/Container';
+import Peragraph from './common/Peragraph';
 
 const Banner = () => {
   return (
@@ -9,7 +10,7 @@ const Banner = () => {
             <BnrWraper>
                 <BnrTxt>
                     <HeaddingOne>Lessons and insights <HeadClr>from 8 years</HeadClr></HeaddingOne>
-                    <Paragraph>Where to grow your business as a photographer: site or social media?</Paragraph>
+                    <Peragraph pera="Where to grow your business as a photographer: site or social media?"/>
                     <Register>Register</Register>
                 </BnrTxt>
                 <BnrImg>
@@ -51,16 +52,6 @@ const HeadClr = styled.span`
 color: #4CAF4F;
 display: block
 `
-
-const Paragraph = styled.p`
-font-family: "Inter", sans-serif;
-color: #717171;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-margin-top: -20px;
-`
-
 
 const Register = styled.button`
 color: #fff;

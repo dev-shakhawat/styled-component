@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container from './common/Container'
+import Container from './common/Container';
 
 const Navbar = () => {
 
@@ -73,26 +73,25 @@ display: flex;
 gap: 14px;
 `
 
-const Login = styled.button`
-color:  #4CAF4F;
+
+const Btn = styled.button`
 font-family: "Inter", sans-serif;
 font-size: 14px;
 font-weight: 500;
 line-height: 20px;
 padding: 10px 20px;
-background: transparent;
-border: none;
-cursor: pointer;
-`
-
-const Signup = styled.button`
-color: #fff;
-font-size: 14px;
-font-weight: 500;
-line-height: 20px;
-background:  #4CAF4F;
-padding: 10px 20px;
 border: none;
 border-radius: 6px;
 cursor: pointer;
+`
+
+const Login = styled(Btn)`
+color:  #4CAF4F;
+background: none;
+`
+
+const Signup = styled(Btn)`
+color: #fff;
+background:  #4CAF4F;
+
 `
