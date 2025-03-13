@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Title = ({heading , para , $width , $lineheight}) => {
+const Title = ({heading , para , $width , $Perawidth , $peramargin , $lineheight}) => {
   return (
     <TitleMain>
         <Head $width={$width} $lineheight={$lineheight}>{heading}</Head>
-        <Paragraph>{para}</Paragraph>
+        <Paragraph $peramargin={$peramargin} $Perawidth={$Perawidth}>{para}</Paragraph>
     </TitleMain>
   )
 }
@@ -32,4 +32,8 @@ font-family: "Inter", sans-serif;
 font-size: 16px;
 line-height: 24px;
 color: #717171;
+width: ${(props) => props.$Perawidth || 'auto'};
+margin-top: ${(props) => props.$peramargin};
+margin-left: auto;
+margin-right: auto;
 `

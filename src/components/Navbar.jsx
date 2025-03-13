@@ -32,6 +32,7 @@ top: 0;
 lefty: 0;
 width: 100%;
 padding: 22px 0;
+z-index: 2;
 `;
 
 const NavWraper = styled.div`
