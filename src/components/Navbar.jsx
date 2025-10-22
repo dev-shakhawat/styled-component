@@ -55,7 +55,7 @@ const NavContainer = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    padding: 22px 0;
+    padding: 22px 5px;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 

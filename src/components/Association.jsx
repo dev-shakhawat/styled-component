@@ -12,13 +12,18 @@ const Association = () => {
                 <Name>Tim Smith</Name>
                 <Peragraph pera="British Dragon Boat Racing Association" />
                 <Customers>
-                    <CustImg src="/customer1.png" alt="client1" />
-                    <CustImg src="/client2.png" alt="client2" />
-                    <CustImg src="/client3.png" alt="client3" />
-                    <CustImg src="/client4.png" alt="client4" />
-                    <CustImg src="/client5.png" alt="client5" />
-                    <CustImg src="/client6.png" alt="client5" />
-                    <Metall>Meet all customers <CustImg src="/Right.png" alt="Rught" /></Metall>
+                    <CustomerLogos>
+                        <CustImg src="/customer1.png" alt="client1" />
+                        <CustImg src="/client2.png" alt="client2" />
+                        <CustImg src="/client3.png" alt="client3" />
+                        <CustImg src="/client4.png" alt="client4" />
+                        <CustImg src="/client5.png" alt="client5" />
+                        <CustImg src="/client6.png" alt="client6" />
+                    </CustomerLogos>
+                    <Metall href="#">
+                        Meet all customers 
+                        <ArrowIcon src="/Right.png" alt="Right" />
+                    </Metall>
                 </Customers>
             </AssoBox>
         </Container>
@@ -28,39 +33,175 @@ const Association = () => {
 
 export default Association;
 
-
 const AssoMain = styled.div`
-padding: 33px 0;
-background: #F5F7FA;
+    padding: 33px 0;
+    background: #F5F7FA;
+    
+    @media (max-width: 768px) {
+        padding: 25px 0;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 20px 0;
+    }
 `
 
-let AssoBox = styled.div`
-padding: 0 17% 0 30%;
+const AssoBox = styled.div`
+    padding: 0 17% 0 30%;
+    
+    @media (max-width: 1200px) {
+        padding: 0 15% 0 25%;
+    }
+    
+    @media (max-width: 1024px) {
+        padding: 0 12% 0 20%;
+    }
+    
+    @media (max-width: 768px) {
+        padding: 0 8%;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 0 5%;
+    }
+    
+    @media (max-width: 360px) {
+        padding: 0 3%;
+    }
 `
 
-let Name = styled.h3`
-font-family: "Inter", sans-serif;
-font-weight: 600;
-font-size: 20px;
-line-height: 2px;
-color: #4CAF4F;
+const Name = styled.h3`
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #4CAF4F;
+    margin: 16px 0 8px 0;
+    
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 14px 0 6px 0;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 12px 0 4px 0;
+    }
 `
 
-let Customers = styled.div`
-display: flex;
-justify-content: space-between;
+const Customers = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 28px;
+    }
+    
+    @media (max-width: 480px) {
+        gap: 20px;
+        margin-top: 24px;
+    }
 `
 
-let CustImg = styled.img`
-height: 40px;
+const CustomerLogos = styled.div`
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    @media (max-width: 1200px) {
+        gap: 30px;
+    }
+    
+    @media (max-width: 1024px) {
+        gap: 25px;
+    }
+    
+    @media (max-width: 768px) {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    @media (max-width: 480px) {
+        gap: 15px;
+    }
+    
+    @media (max-width: 360px) {
+        gap: 12px;
+    }
 `
 
-let Metall = styled.a`
-font-family: "Inter", sans-serif;
-font-weight: 600;
-font-size: 20px;
-line-height: 2px;
-color: #4CAF4F;
-display: flex;
-align-items: center;
+const CustImg = styled.img`
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    
+    @media (max-width: 1024px) {
+        height: 35px;
+    }
+    
+    @media (max-width: 768px) {
+        height: 32px;
+    }
+    
+    @media (max-width: 480px) {
+        height: 28px;
+    }
+    
+    @media (max-width: 360px) {
+        height: 24px;
+    }
+`
+
+const Metall = styled.a`
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #4CAF4F;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    
+    &:hover {
+        color: #45a049;
+        transform: translateX(4px);
+    }
+    
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 15px;
+        line-height: 20px;
+    }
+`
+
+const ArrowIcon = styled.img`
+    height: 20px;
+    width: auto;
+    
+    @media (max-width: 768px) {
+        height: 18px;
+    }
+    
+    @media (max-width: 480px) {
+        height: 16px;
+    }
 `
